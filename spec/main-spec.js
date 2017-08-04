@@ -1,11 +1,12 @@
-const main = require('../main/main');
+const printInventory = require('../main/main.js');
+const dat = require('../main/datbase.js');
+var loadAllItems = dat.loadAllItems;
+var loadPromotions = dat.loadPromotions;
 
 describe('pos', function () {
-    var allItems;
     var inputs;
 
     beforeEach(function () {
-        allItems = loadAllItems();
         inputs = [
             'ITEM000001',
             'ITEM000001',
